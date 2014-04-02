@@ -1,0 +1,50 @@
+/* General */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.half {
+  float: left;
+  width: 50%;
+}
+
+ul.reset li:before { 
+  display: none !important;
+}
+
+/* Slide */
+.slide h2 {
+  margin-bottom: 20px;
+}
+
+.slide hgroup { margin-bottom: 20px; }
+.slide hgroup h2 { margin-bottom:  0; }
+
+.slide p {
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+img.stretch {
+  min-width: 100%;
+}
+
+/* Title */
+#title {
+  background: #0091d5;
+}
+
+#title h2 {
+  color:#FFF;
+  text-align:center;
+  font-size:70px;
+}
+
+#title p {
+  text-align:center;
+  color:#FFF;
+  font-style:italic;
+  font-size:20px;
+}
