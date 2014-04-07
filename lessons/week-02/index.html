@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Week Two - JavaScript for Programmers</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="../../lib/shower/themes/ribbon/styles/screen.css">
+	<link rel="stylesheet" href="../../lib/shared/stylesheets/tsl.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>jQuery Essentials</h1>
+		<p>Week Two, JavaScript for Programmers, Spring 2014</p>
+	</header>
+
+	<!-- Cover -->
+	<section class="slide cover" id="title"><div>
+		<h2>jQuery Essentials</h2>
+		<p>Week Two, JavaScript for Programmers, Spring 2014</p>
+	</div></section>
+
+	<!-- Challenge -->
+	<section class="slide"><div>
+		<hgroup>
+			<h2>Challenge</h2>
+			<h3><a href="http://jsbin.com/gubuz/1/edit" target="_blank">http://jsbin.com/gubuz/1/edit</a></h3>
+		</hgroup>
+		<p>Use jQuery selectors to hide/show specific elements.</p>
+		<p class="note"><strong>Bonus:</strong> See if you can use only one selector per challenge.</p>
+	</div></section>
+
+	<!-- jQuery API -->
+	<section class="slide"><div>
+		<h2>jQuery API</h2>
+		<h3><a href="http://api.jquery.com" target="_blank">http://api.jquery.com</a></h3>
+	</div></section>
+
+	<!-- Today -->
+	<section class="slide"><div>
+		<h2>Today</h2>
+		<ul>
+			<li>$(document).ready()</li>
+			<li>Organizing a jQuery script</li>
+			<li>Handling click events</li>
+			<li>Traversing</li>
+			<li>Show / Hide / Effects</li>
+			<li>Attributes</li>
+			<li>Adding / removing CSS classes</li>
+			<li>CSS and Animate</li>
+		</ul>
+	</div></section>
+
+	<!-- Today -->
+	<section class="slide"><div>
+		<hgroup>
+			<h2>Organizing a jQuery script</h2>
+			<h3><a href="http://jsbin.com/bohon/1/edit" target="_blank">http://jsbin.com/bohon/1/edit</a></h3>
+		</hgroup>
+	</div></section>
+
+	<!-- Today -->
+	<section class="slide"><div>
+		<h2>Click events</h2>
+		<pre><code>
+			$("a").click(function () {
+				console.log("Do something");
+				return false;
+			});
+		</code></pre>
+	</div></section>
+
+	<!-- Pair programming #1 -->
+	<section class="slide"><div>
+		<hgroup>
+			<h2>Pair programming</h2>
+			<h3><a href="http://jsbin.com/difef/3/edit" target="_blank">http://jsbin.com/difef/3/edit</a></h3>
+		</hgroup>
+		<ul>
+			<li>Hide the red boxes</li>
+			<li>Show the orange boxes</li>
+		</ul>
+	</div></section>
+
+	<!-- Traversing -->
+	<section class="slide"><div>
+		<hgroup>
+			<h2>Traversing</h2>
+			<h3><a href="http://api.jquery.com/category/traversing/" target="_blank">http://api.jquery.com/category/traversing/</a></h3>
+		</hgroup>
+		<p class="note">Usually follows one of two patterns:</p>
+		<ul>
+			<li>Starting at a point, and getting somewhere else</li>
+			<li>Getting one from a collection</li>
+		</ul>
+	</div></section>
+
+	<!-- Pair programming #2 -->
+	<section class="slide"><div>
+		<hgroup>
+			<h2>Pair programming</h2>
+			<h3><a href="	http://jsbin.com/paboc/3/edit" target="_blank">http://jsbin.com/paboc/3/edit</a></h3>
+		</hgroup>
+		<p>You should be able to click on any close button, and close only that alert dialog box.</p>
+	</div></section>
+
+	<!-- The Simplest Model -->
+	<section class="slide"><div>
+		<hgroup>
+			<h2>The Simplest Model</h2>
+		</hgroup>
+		<pre>
+			<code>var count = 0;</code>
+			<code>count++;/code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<hgroup>
+			<h2>CSS and Animate</h2>
+		</hgroup>
+		<ul>
+			<li>Let CSS handle the presentation layer.</li>
+			<li>But if you must...</li>
+			<li><code>$().css();</code></li>
+			<li><code>$().animate();</code></li>
+		</ul>
+	</div></section>
+
+	<script src="../../lib/shower/shower.min.js"></script>
+</body>
+</html>
