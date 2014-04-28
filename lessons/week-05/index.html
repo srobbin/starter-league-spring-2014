@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Week Five - JavaScript for Programmers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../lib/shower/themes/ribbon/styles/screen.css">
+  <link rel="stylesheet" href="../../lib/shared/stylesheets/tsl.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Intro to Angular</h1>
+    <p>Week Five, JavaScript for Programmers, Spring 2014</p>
+  </header>
+
+  <!-- Cover -->
+  <section class="slide cover" id="title"><div>
+    <h2>Intro to Angular</h2>
+    <p>Week Five, JavaScript for Programmers, Spring 2014</p>
+  </div></section>
+
+  <!-- Today -->
+  <section class="slide"><div>
+    <h2>Today</h2>
+    <ul>
+      <li>Asynchronous</li>
+      <li>AJAX</li>
+      <li>Angular</li>
+      <li>Two-way data binding</li>
+      <li>Directives</li>
+      <li>Controller</li>
+    </ul>
+  </div></section>
+
+  <!-- $.post -->
+  <section class="slide"><div>
+    <h2>$.post</h2>
+    <pre>
+      <code>var data = {color: 'green'};</code>
+      <code>$.post("/path/to/resource", data, function (response) {</code>
+      <code>  console.log(results);</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <!-- Serialize a form -->
+  <section class="slide"><div>
+    <h2>Serialize a form</h2>
+    <p>Instead of hand coding your data object</p>
+    <pre>
+      <code>var data = {color: $("input[name=color]").val()};</code>
+    </pre>
+    <p>You can serialize the form:</p>
+    <pre>
+      <code>$("form").serialize();</code>
+    </pre>
+    Which turns your form fields into this (uses the name attribute):
+    <pre>
+      <code>color=green</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Pair Program</h2>
+    <p>Post the form, and display a success message.</p>
+    <ul>
+      <li>http://jsbin.com/cuquna/1/edit</li>
+      <li>Use the <code>action</code> attribute as your URL</li>
+      <li>Show a success message (of your choosing) when the server responds.</li>
+    </ul>
+  </div></section>
+
+  <!-- Angular -->
+  <section class="slide"><div>
+    <h2>AngularJS</h2>
+    <ul>
+      <li>Add the <code>ng-app</code> directive to <code>html</code></li>
+      <li>Use the <code>ng-model</code> directive to change the model</li>
+      <li>Listen for model changes with a <code>{{templateTag}}</code> </li>
+    </ul>
+  </div></section>
+
+  <!-- Angular Diagram -->
+  <section class="slide"><div style="text-align:center">
+    <img src="pictures/angular.png" style="margin-top: -10%" alt="">
+  </div></section>
+
+  <!-- Controller -->
+  <section class="slide"><div>
+    <h2>Controller</h2>
+    <ul>
+      <li>Create a constructor function (e.g. TestCtrl)</li>
+      <li>Pass in <code>$scope</code></li>
+      <li>Add the corresponding <code>ng-controller</code> directive to your view</li>
+    </ul>
+  </div></section>
+
+  <!-- Directives -->
+  <section class="slide"><div>
+    <h2>Directives</h2>
+    <ul>
+      <li>ng-click</li>
+      <li>ng-show / ng-hide</li>
+      <li>ng-class</li>
+      <li>ng-repeat</li>
+    </ul>
+  </div></section>
+
+  <script src="../../lib/shower/shower.min.js"></script>
+</body>
+</html>
