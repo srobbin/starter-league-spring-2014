@@ -48,3 +48,6 @@ img.stretch {
   font-style:italic;
   font-size:20px;
 }
+
+pre.nonums code { line-height: 1.5em; }
+pre.nonums code:before { display: none; margin: none; }

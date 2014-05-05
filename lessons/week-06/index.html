@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Week Six - JavaScript for Programmers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../lib/shower/themes/ribbon/styles/screen.css">
+  <link rel="stylesheet" href="../../lib/shared/stylesheets/tsl.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Module and $http</h1>
+    <p>Week Six, JavaScript for Programmers, Spring 2014</p>
+  </header>
+
+  <!-- Cover -->
+  <section class="slide cover" id="title"><div>
+    <h2>Module and $http</h2>
+    <p>Week Six, JavaScript for Programmers, Spring 2014</p>
+  </div></section>
+
+  <!-- Today -->
+  <section class="slide"><div>
+    <h2>Today</h2>
+    <ul>
+      <li>Angular Review</li>
+      <li>Filters</li>
+      <li>Module</li>
+      <li>$http</li>
+    </ul>
+  </div></section>
+
+  <!-- Filters -->
+  <section class="slide"><div>
+    <h2>Filters</h2><br>
+    <pre class="nonums">
+      <code>{{ modelName | filterName }}</code>
+    </pre>
+  </div></section>
+
+  <!-- Module -->
+  <section class="slide"><div>
+    <h2>Module</h2><br>
+    <pre class="nonums">
+      <code>var app = angular.module('app', []);</code>
+      <code>&nbsp;</code>
+      <code>app.controller('ThingCtrl', function($scope) {</code>
+      <code>  $scope.foo = 'Foo';</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <!-- $http -->
+  <section class="slide"><div>
+    <h2>$http</h2>
+    <ul>
+      <li>$http.get</li>
+      <li>$http.head</li>
+      <li>$http.post</li>
+      <li>$http.put</li>
+      <li>$http.delete</li>
+    </ul>
+  </div></section>
+  <section class="slide"><div>
+    <h2>$http</h2><br>
+    <pre class="nonums">
+      <code>$http.get('/url', params)</code>
+      <code>  .success(function(data, status, headers, config) {</code>
+      <code>  })</code>
+      <code>  .error(function(data, status, headers, config) {</code>
+      <code>  });</code>
+    </pre>
+  </div></section>
+  <section class="slide"><div>
+    <h2>$http</h2><br>
+    <pre class="nonums">
+      <code>var app = angular.module('app', []);</code>
+      <code>&nbsp;</code>
+      <code>app.controller('ThingCtrl', function($scope, $http) {</code>
+      <code>  $scope.getSomething = function() {</code>
+      <code>    $http.get(...);</code>
+      <code>  };</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <script src="../../lib/shower/shower.min.js"></script>
+</body>
+</html>
