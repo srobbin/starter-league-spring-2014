@@ -65,7 +65,11 @@
   <section class="slide"><div>
     <h2>$http</h2><br>
     <pre class="nonums">
-      <code>$http.get('/url', params)</code>
+      <code>$http.get('/url', {</code>
+      <code>    params: {</code>
+      <code>      q: 'beets'</code>
+      <code>    }</code>
+      <code>  })</code>
       <code>  .success(function(data, status, headers, config) {</code>
       <code>  })</code>
       <code>  .error(function(data, status, headers, config) {</code>
