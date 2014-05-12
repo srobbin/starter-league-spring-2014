@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Week Seven - JavaScript for Programmers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../lib/shower/themes/ribbon/styles/screen.css">
+  <link rel="stylesheet" href="../../lib/shared/stylesheets/tsl.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>$watch, $resource, and factory</h1>
+    <p>Week Seven, JavaScript for Programmers, Spring 2014</p>
+  </header>
+
+  <!-- Cover -->
+  <section class="slide cover" id="title"><div>
+    <h2>$watch, $resource, and factory</h2>
+    <p>Week Seven, JavaScript for Programmers, Spring 2014</p>
+  </div></section>
+
+  <!-- Today -->
+  <section class="slide"><div>
+    <h2>Today</h2>
+    <ul>
+      <li>$watch</li>
+      <li>Factory</li>
+      <li>Integrating with Rails</li>
+      <li>$resource</li>
+    </ul>
+  </div></section>
+
+  <!-- Angular Diagram -->
+  <section class="slide"><div style="text-align:center">
+    <img src="pictures/angular.png" style="margin-top: -10%" alt="">
+  </div></section>
+
+  <!-- $watch -->
+  <section class="slide"><div>
+    <h2>$scope.$watch</h2><br>
+    <pre class="nonums">
+      <code>$scope.$watch('foo', function(oldVal, newVal) {</code>
+      <code>  console.log("Do something");</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <!-- $watch -->
+  <section class="slide"><div>
+    <h2>$scope.$watch Reference Data Types</h2><br>
+    <pre class="nonums">
+      <code>$scope.$watch('foo', function(oldVal, newVal) {</code>
+      <code>  console.log("Do something");</code>
+      <code>}, true);</code>
+    </pre>
+  </div></section>
+
+  <!-- Value -->
+  <section class="slide"><div>
+    <h2>Value</h2><br>
+    <pre class="nonums">
+      <code>demo.value('Version', 1);</code>
+      <code>&nbsp;</code>
+      <code>demo.controller('TestCtrl1', function($scope, Version) {</code>
+      <code>  ...</code>
+      <code>});</code>
+      <code>&nbsp;</code>
+      <code>demo.controller('TestCtrl2', function($scope, Version) {</code>
+      <code>  ...</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <!-- Factory -->
+  <section class="slide"><div>
+    <h2>Factory</h2><br>
+    <pre class="nonums">
+      <code>demo.factory('Foo', function () { return {}; });</code>
+      <code>&nbsp;</code>
+      <code>demo.controller('TestCtrl1', function($scope, Foo) {</code>
+      <code>  ...</code>
+      <code>});</code>
+      <code>&nbsp;</code>
+      <code>demo.controller('TestCtrl2', function($scope, Foo) {</code>
+      <code>  ...</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <!-- $resource -->
+  <section class="slide"><div>
+    <h2>$resource</h2><br>
+    <ul>
+      <li class="step">Include the angularjs-resource.js script</li>
+      <li class="step">Include 'ngResource` as a dependency when creating your module</li>
+      <li class="step">Include CSRF headers</li>
+      <li class="step">Create custom methods (like PUT) if needed</li>
+    </ul>
+  </div></section>
+
+  <script src="../../lib/shower/shower.min.js"></script>
+</body>
+</html>
