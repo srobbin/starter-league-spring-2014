@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Week Eight - JavaScript for Programmers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../lib/shower/themes/ribbon/styles/screen.css">
+  <link rel="stylesheet" href="../../lib/shared/stylesheets/tsl.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Form Validations and Custom Filters</h1>
+    <p>Week Eight, JavaScript for Programmers, Spring 2014</p>
+  </header>
+
+  <!-- Cover -->
+  <section class="slide cover" id="title"><div>
+    <h2>Form Validations and Custom Filters</h2>
+    <p>Week Eight, JavaScript for Programmers, Spring 2014</p>
+  </div></section>
+
+  <!-- Today -->
+  <section class="slide"><div>
+    <h2>Today</h2>
+    <ul>
+      <li>More $resource</li>
+      <li>Form Validation</li>
+      <li>Custom Filters</li>
+    </ul>
+  </div></section>
+
+  <!-- $resource -->
+  <section class="slide"><div>
+    <h2>$resource</h2><br>
+    <ul>
+      <li class="step">Include the angularjs-resource.js script</li>
+      <li class="step">Include 'ngResource` as a dependency when creating your module</li>
+      <li class="step">Include CSRF headers</li>
+      <li class="step">Create custom methods (like PUT) if needed</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>$resource</h2><br>
+    <pre class="nonums">
+      <code>app.factory('Todos', function ($resource) {</code>
+      <code>  return $resource("/todos/:id.json", {id: "@id"}, {</code>
+      <code>    update: {</code>
+      <code>      method: "PUT"</code>
+      <code>    }</code>
+      <code>  });</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>PAIR #1</h2><br>
+    <p>Geocode an address, and display it on a map.</p>
+    <p>http://jsbin.com/focev/1/edit</p>
+  </div></section>  
+
+  <section class="slide"><div>
+    <h2>PAIR #2</h2>
+    <p>Recreate the Grocery List app in Rails/Angular</p>
+    <img src="pictures/grocery.png">
+  </div></section>  
+
+  <!-- Form Validation -->
+  <section class="slide"><div>
+    <h2>Forms</h2><br>
+    <ul>
+      <li>ng-valid</li>
+      <li>ng-invalid</li>
+      <li>ng-pristine</li>
+      <li>ng-dirty</li>
+    </ul>
+  </div></section>
+
+  <!-- Custom Filters -->
+  <section class="slide"><div>
+    <h2>Custom Filters</h2><br>
+    <pre class="nonums">
+      <code>app.filter('exclaim', function () {</code>
+      <code>  return function(input) {</code>
+      <code>    return input + "!";</code>
+      <code>  };</code>
+      <code>});</code>
+    </pre>
+  </div></section>
+
+  <script src="../../lib/shower/shower.min.js"></script>
+</body>
+</html>
