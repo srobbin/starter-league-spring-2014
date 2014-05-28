@@ -1,0 +1,17 @@
+<h1>New Post</h1>
+<form name="posts" action="." method="post" novalidate>
+  <p>
+    <label>Title</label>
+    <input name="title" required>
+  </p>
+
+  <p>
+    <label>Body</label>
+    <textarea name="body" required></textarea>
+  </p>
+
+  <p>
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Submit">
+  </p>
+</form>

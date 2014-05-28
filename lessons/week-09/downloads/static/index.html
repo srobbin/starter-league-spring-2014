@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Static Example</title>
+</head>
+<body>
+  <header>My App</header>
+
+  <small><code>python -m SimpleHTTPServer</code></small>
+
+  <div ng-view></div>
+
+  <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.2.16/angular-route.min.js"></script>
+
+  <script>
+    var app = angular.module('app', ['ngRoute']);
+
+    app.config(function ($routeProvider) {
+      $routeProvider
+        .when('/', {
+          templateUrl: 'templates/home.html',
+          controller: 'HomeCtrl'
+        })
+        .when('/detail/:slug', {
+          templateUrl: 'templates/detail.html',
+          controller: 'DetailsCtrl'
+        })
+        .otherwise({
+          route: '/'
+        });
+    });
+
+    app.controller('HomeCtrl', function ($scope) {
+    });
+
+    app.controller('DetailsCtrl', function ($scope, $routeParams) {
+      $scope.title = $routeParams.slug;
+    });
+  </script>
+</body>
+</html>

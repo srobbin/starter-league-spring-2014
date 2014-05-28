@@ -1,0 +1,2 @@
+class ModerateController < ApplicationController
+end
