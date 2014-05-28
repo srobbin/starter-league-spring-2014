@@ -10,7 +10,39 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require angular
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var app = angular.module('app', []);
+
+app.controller('FormCtrl', function($scope) {
+  $scope.submitForm = function(e) {
+    if ($scope.posts.$invalid) {
+      $scope.showError = true;
+      e.preventDefault();
+    } else {
+      $scope.showError = false;
+    }
+  };
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

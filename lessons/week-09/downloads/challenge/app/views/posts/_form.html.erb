@@ -1,4 +1,4 @@
-<%= form_for @post, html: {name: 'posts', novalidate: true} do |f| %>
+<%= form_for @post, html: {name: 'posts', novalidate: true, 'ng-submit' => 'submitForm($event)'} do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title, name: 'title', required: true %>
+    <%= f.text_field :title, name: 'title', required: true, 'ng-model' => 'post.title' %>
   </div>
   <div class="field">
     <%= f.label :body %><br>

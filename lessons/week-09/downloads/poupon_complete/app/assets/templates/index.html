@@ -1,0 +1,7 @@
+<div class="deals-all container">
+  <a href="#/deal/{{ deal.id }}" class="col-md-3" ng-repeat="deal in deals">
+    <img src="/assets/poupon.jpg" class="fit">
+    <h3>{{ deal.title }}</h3>
+    <span class="original">{{ deal.original_price | currency }}</span> <strong>{{ deal.discounted_price | currency }}</strong>
+  </a>
+</div>

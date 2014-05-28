@@ -1,0 +1,7 @@
+<h1>All Blog Posts</h1>
+
+<article ng-repeat="post in posts">
+  <h3><a href="#/post/{{ post.id }}">{{ post.title }}</a></h3>
+  <p>{{ post.body }}</p>
+  <a href="#/post/{{ post.id }}">Read more &raquo;</a>
+</article>

@@ -1,0 +1,57 @@
+/*
+ *= require_self
+ */
+
+@import "bootstrap";
+
+/* Base */
+img.fit { 
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Header */
+header {
+  background: #333;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/* Deals */
+.deals-all {
+  font-size: 16px;
+  text-align: right;
+
+  a {
+    display: block;
+    margin-bottom: 20px;
+    color: #333;
+    text-decoration: none;
+
+    &:hover h3 { text-decoration: underline; }
+  }
+
+  h3 { 
+    margin: 0;
+    font-weight: 100;
+  }
+
+  .original { 
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  strong {
+    color: #82b548;
+  }
+}
+
+.deals-detail {
+  h1 {
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+}

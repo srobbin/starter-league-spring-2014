@@ -1,0 +1,21 @@
+<div class="deals-detail container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ deal.title }}</h1>
+      <p>{{ deal.description }}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 center">
+      <h2>{{ deal.discounted_price | currency }}</h2>
+      <button type="button" class="btn btn-success btn-lg">Buy now!</button>
+      <hr>
+      <p>So far, <strong>{{ deal.num_purchased }}</strong> have bought this deal. How could you blame them? Itr's <strong>{{ deal.original_price - deal.discounted_price | currency }}</strong> off the original purchase price!</p>
+    </div>
+
+    <div class="col-md-8">
+      <img src="/assets/poupon.jpg" class="fit">
+    </div>
+  </div>
+</div>
