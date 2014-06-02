@@ -1,0 +1,13 @@
+<div ng-class="{submitted: formSubmitted}">
+  <h1>All Notes</h1>
+
+  <form action="#" name="createForm" ng-submit="createNewNote($event)" novalidate>
+    <p><input type="text" name="title" placeholder="Title" ng-model="newNote.title" required></p>
+    <p><input type="text" name="body" placeholder="Body" ng-model="newNote.body" required></p>
+    <p><input type="submit" value="Save note"></p>
+  </form>
+
+  <ul class="list">
+    <li ng-repeat="note in notes"><a href="#/note/{{ note.id }}">{{ note.title }}</a></li>
+  </ul>
+</div>

@@ -11,17 +11,48 @@
 // about supported directives.
 //
 //= require angular
+//= require angular-resource
+//= require angular-route
 //= require turbolinks
 //= require_tree .
 
-var notes = angular.module('notes', []);
+var notes = angular.module('notes', ['ngRoute', 'ngResource']);
 
 notes.config(function($httpProvider, $routeProvider) {
   $httpProvider.defaults.headers.common['X-CSRF-Token'] = document.querySelector('meta[name=csrf-token]').content
+
+  $routeProvider
+    .when('/', {
+      templateUrl: '<%= asset_url("all.html") %>',
+      controller: 'AllCtrl'
+    })
+    .when('/note/:id', {
+      templateUrl: '<%= asset_url("note.html") %>',
+      controller: 'NoteCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    })
 });
 
-notes.controller('AllCtrl', function ($scope) {
+notes.factory('Notes', function($resource) {
+  return $resource('/notes/:id.json', {id: '@id'});
 });
 
-notes.controller('NoteCtrl', function ($scope) {
+notes.controller('AllCtrl', function ($scope, Notes) {
+  $scope.notes = Notes.query();
 });
+
+notes.controller('NoteCtrl', function ($scope, $routeParams, Notes) {
+  $scope.note = Notes.get({id: $routeParams.id});
+});
+
+
+
+
+
+
+
+
+
+
