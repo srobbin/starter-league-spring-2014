@@ -18,6 +18,8 @@
 //= require_tree .
 
 var notes = angular.module('notes', ['ngRoute', 'ngResource', 'ngAnimate']);
+var pusher = new Pusher('7328b9228bd78419d522');
+var channel = pusher.subscribe('notes_channel');
 
 notes.config(function($httpProvider, $routeProvider) {
   $httpProvider.defaults.headers.common['X-CSRF-Token'] = document.querySelector('meta[name=csrf-token]').content
@@ -42,6 +44,12 @@ notes.factory('Notes', function($resource) {
 
 notes.controller('AllCtrl', function ($scope, Notes) {
   $scope.notes = Notes.query();
+  $scope.numNewNotes = 0;
+
+  channel.bind('new_note', function() {
+    $scope.numNewNotes++;
+    $scope.$apply();
+  });
 
   $scope.createNewNote = function(e) {
     e.preventDefault();

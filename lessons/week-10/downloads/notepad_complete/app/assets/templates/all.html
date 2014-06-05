@@ -7,6 +7,7 @@
     <p><input type="submit" value="Save note"></p>
   </form>
 
+  <a href="#" ng-show="numNewNotes" ng-click="showNotes($event)">New notes {{ numNewNotes }}</a>
   <ul class="list">
     <li ng-repeat="note in notes"><a href="#/note/{{ note.id }}">{{ note.title }}</a></li>
   </ul>
