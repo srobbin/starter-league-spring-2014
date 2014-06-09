@@ -46,8 +46,8 @@ notes.controller('AllCtrl', function ($scope, Notes) {
   $scope.notes = Notes.query();
   $scope.numNewNotes = 0;
 
-  channel.bind('new_note', function() {
-    $scope.numNewNotes++;
+  channel.bind('new_note', function(note) {
+    $scope.notes.push(note);
     $scope.$apply();
   });
 

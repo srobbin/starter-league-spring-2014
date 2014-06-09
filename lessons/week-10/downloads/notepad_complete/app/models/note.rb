@@ -3,6 +3,6 @@ class Note < ActiveRecord::Base
 
 private
   def send_pusher
-    Pusher['notes_channel'].trigger('new_note')
+    Pusher['notes_channel'].trigger('new_note', self.to_json)
   end
 end
