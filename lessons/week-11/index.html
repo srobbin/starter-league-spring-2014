@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Week Eleven - JavaScript for Programmers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../lib/shower/themes/ribbon/styles/screen.css">
+  <link rel="stylesheet" href="../../lib/shared/stylesheets/tsl.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Production-Ready and Review</h1>
+    <p>Week Eleven, JavaScript for Programmers, Spring 2014</p>
+  </header>
+
+  <!-- Cover -->
+  <section class="slide cover" id="title"><div>
+    <h2>Production-Ready and Review</h2>
+    <p>Week Eleven, JavaScript for Programmers, Spring 2014</p>
+  </div></section>
+
+  <!-- Today -->
+  <section class="slide"><div>
+    <h2>Today</h2>
+    <ul>
+      <li>Preparing for Production</li>
+      <li>Review</li>
+      <li>Custom Directives</li>
+    </ul>
+  </div></section>
+
+  <!-- Production -->
+  <section class="slide"><div>
+    <h2>Production</h2>
+    <ul>
+      <li>Minification</li>
+      <li>Flash of Angular code</li>
+      <li>Internet Explorer</li>
+      <li>Organizing Files</li>
+    </ul>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Production: Minification</h2>
+    <p>You must pass in the arguments as an array.</p>
+    <pre class="nonums">
+      <code>app.controller('TestCtrl', ['$scope', function ($scope) {</code>
+      <code>  $scope.foo = 'Foo';</code>
+      <code>}]);</code>
+    </pre>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Production: Flash of Angular code</h2>
+    <p>When you refresh the screen, you'll see the <code>{{ foo }}</code> tags before Angular loads.</p>
+    <pre class="nonums next">
+      <code>&lt;div&gt;{{ foo }}&lt;/div&gt;</code>
+      <code>&lt;div ng-bind="foo"&gt;&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Production: Flash of Angular code</h2>
+    <p>When you refresh the screen, you'll see the <code>{{ foo }}</code> tags before Angular loads.</p>
+    <pre class="nonums">
+      <code>[ng\:cloak], [ng-cloak], [data-ng-cloak],</code>
+      <code>[x-ng-cloak], .ng-cloak, .x-ng-cloak {</code>
+      <code>  display: none !important;</code>
+      <code>}</code>
+      <code>&nbsp;</code>
+      <code>&lt;div ng-cloak&gt;{{ foo }}&lt;/div&gt;</code>
+    </pre>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Production: Internet Explorer</h2>
+    <ul>
+      <li>Angular 1.2 provides support for IE >= 9</li>
+      <li>Can get it to work in IE 7 and 8 with a little work</li>
+      <li>Angular 1.3 is dropping support for IE8 and below</li>
+      <li><a href="https://docs.angularjs.org/guide/ie">https://docs.angularjs.org/guide/ie</a></li>
+    </ul>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Production: Organizing files</h2>
+    <pre class="nonums">
+      <code> /assets</code>
+      <code>   javascripts</code>
+      <code>     controllers</code>
+      <code>       test-controller.js</code>
+      <code>     factories</code>
+      <code>     filters</code>
+      <code>     application.js</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Review</h2>
+    <ul>
+      <li>JavaScript</li>
+      <li>jQuery (Events, State, Ajax)</li>
+      <li>Angular</li>
+      <li>$http</li>
+      <li>$watch, $resource, Factory</li>
+      <li>Form Validation and Custom Filters</li>
+      <li>$routes</li>
+      <li>Animate and WebSockets</li>
+    </ul>
+  </div></section>
+
+
+  <script src="../../lib/shower/shower.min.js"></script>
+</body>
+</html>
